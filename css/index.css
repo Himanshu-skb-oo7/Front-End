@@ -1,0 +1,409 @@
+@font-face {
+  font-family: "ProximaNovaCond Reg";
+  src: url("../img/FE_ Assignment 2 - GFT/fonts/ProximaNovaCond-Regular.otf")format('opentype');
+}
+
+@font-face {
+  font-family: "ProximaNovaCond Semi";
+  src: url("../img/FE_ Assignment 2 - GFT/fonts/ProximaNovaCond-Semibold.otf")format('opentype');
+}
+
+@font-face {
+  font-family: "ProximaNovaCond Light";
+  src: url("../img/FE_ Assignment 2 - GFT/fonts/ProximaNovaCond-Light.otf")format('opentype');
+}
+
+
+body
+{
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/FE_ Assignment 2 - GFT/image resources/header-bkgd-airplane4b_1280x440.png");
+  background-repeat: no-repeat;
+  background-color: #F6F5F3;
+  background-position-y: 90px;
+}
+
+#header-div
+{
+  margin:0 150px;
+  height: 100%;
+  position: relative;
+}
+#main-div
+{
+
+  margin:60px 163px 120px 160px;
+}
+
+.col-4
+{
+  margin-bottom: 25px;
+  padding-left: 10px;
+}
+
+#title
+{
+  background: white;
+  opacity: 0.7;
+  padding: 25px 40px ;
+}
+
+#heading
+{
+  display: inline-block;
+  font-size: 48px;
+  font-family: "ProximaNovaCond Reg",serif,serif;
+  margin: 2px;
+  padding: 0;
+  height: 100%;
+}
+
+#headingAndBtn
+{
+  position: relative;
+  width: 100%;
+}
+
+#contactUs
+{
+  margin-top:2px;
+  margin-right: 3px;
+  font-size: 24px;
+  font-family: "ProximaNovaCond Semi",serif,serif;
+  font-weight: 700;
+  padding: 0;
+  height: 69%;
+  background-color: #2A6AD2 ;
+  display: inline-block;
+  line-height: 50px;
+  width: 280px;
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 0;
+
+}
+
+#header
+{
+  height: 90px;
+  background-color: #2C2C2D;
+}
+
+.row {
+  padding: 0;
+}
+
+#header-content
+{
+  float: right;
+  position: relative;
+  height: 100%;
+  width: 50%;
+}
+
+#header-buttons-div
+{
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 15px;
+}
+
+.header-buttons
+{
+  background-color: transparent;
+  color: white;
+  border:none;
+  padding: 5px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border:2px solid transparent;
+  font-size: 14px;
+  line-height: 12px;
+}
+
+#book-now
+{
+  color:grey;
+  position: absolute;
+  right: 7px;
+  top:6px;
+  font-size: 14px;
+}
+
+.header-buttons:hover
+{
+  color:red;
+  box-shadow: 0 0 8px rgba(0,0,0, 0.5);
+
+}
+
+#content-div
+{
+  background-color: white;
+  padding: 40px;
+  margin-top: -3px;
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+#content-images
+{
+  margin-top: 30px;
+}
+#partners
+{
+  background-color: #F8F8F8 ;
+  bottom:0;
+  padding: 60px;
+  padding-bottom: 40px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(128, 128, 128, 0.33);
+}
+
+#partners-text
+{
+  position: absolute;
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 35px;
+  top: 74px;
+  left: 353px;
+
+}
+
+#partners-image
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#image-row2
+{
+  margin-top: 20px;
+}
+
+h4
+{
+  color: #5DA6CE;
+  font-weight: 600;
+}
+
+#footer-2
+{
+  display: flex;
+  height: 150px;
+  background-color: #000000;
+  font: 11px "ProximaNovaCond Reg";
+  color:white;
+}
+
+#footer-content-parent
+{
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#footer-content-child1
+{
+  font-size: 12px;
+  margin-top: -2px;
+  margin-bottom: 10px;
+  margin-left: -7px;
+  text-align: center;
+  opacity: 0.5;
+}
+
+
+#footer-content-child2
+{
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+#logo
+{
+  height:200px
+}
+
+
+
+#footer-1
+{
+  height:300px;
+  background-color: #2C2B2D;
+  padding: 4px;
+  margin-top: -2px;
+}
+
+
+
+#footer-1-links-parent
+{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+
+.footer-1-links
+{
+
+  font-family: serif;
+  font: 18px "ProximaNovaCond Reg" ;
+  opacity: 0.7;
+  color: white;
+  display: inline-block;
+  margin: 0 auto;
+  padding-top:35px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+#footer-hr
+{
+  width: 8%;
+  opacity: 0.7;
+}
+
+#partners-hr
+{
+  width:10%;
+}
+#logo
+{
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+.numbers
+{
+  position: absolute;
+  top:-32px;
+  right:28px;
+  border:5px solid white;
+  border-radius: 50%;
+}
+
+#bookYourTrip
+{
+  padding: 20px;
+  padding-top: 15px;
+  padding-bottom: 12px;
+  background-color: red;
+  color: white;
+  width: 280px;
+  font-weight: 700;
+  border:none;
+  border-radius: 5px;
+  position: absolute;
+  top:-33px;
+  left: 340px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.46);
+  font-size: 22px;
+
+}
+
+#footer_logo
+{
+  width: 110px;
+  height: 90px;
+  margin-top: 3px;
+  margin-left:-2px
+}
+
+#header_logo
+{
+  width: 90px;
+  height: 90%;
+  position: absolute;
+  left:-25px;
+  top:5px;
+}
+
+a
+{
+  color: dodgerblue;
+}
+
+.font-regular
+{
+
+  font-family: "ProximaNovaCond Reg",serif,serif;
+}
+
+.font-light
+{
+  font-family: "ProximaNovaCond Light",serif,serif;
+}
+
+.font-semibold
+{
+
+  font-family: "ProximaNovaCond Semi",serif,serif;
+}
+
+.image-description
+{
+  font-family: "ProximaNovaCond Light",serif,serif;
+  line-height: 22px;
+  font-size: 18px;
+}
+
+
+#content-div-heading
+{
+  font-weight: 400;
+  margin-top: 8px;
+  font-size: 23px;
+}
+
+.para
+{
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.content-image-div
+{
+  padding-right: 9px;
+}
+
+.content-image
+{
+  height:160px;
+  width:100%;
+  margin-top: 1px;
+}
+
+.image-description-heading {
+  margin-top: -4px;
+  margin-bottom: 13px;
+  line-height: 25px;
+}
+
+#image-row1
+{
+  margin-top: 78px;
+  margin-left: 24px;
+  position: relative;
+}
+
+#image-row2
+{
+  margin-top: 5px;
+  margin-left: 15px;
+  position: relative;
+}
+
