@@ -112,7 +112,7 @@
               {
                   if($row!='.' && $row!='..'  ) {
                       $img_location = "img/FE_ Assignment 2 - GFT/image resources/Partners/$row";
-                      echo "<div class='col-4'><img src='$img_location'></div>";
+                      echo "<div class='partners_images'><img src='$img_location'></div>";
                   }
               }
               ?>

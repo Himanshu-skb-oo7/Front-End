@@ -435,3 +435,9 @@ input[type=submit]:hover {
 {
   padding: 12px 20px;
 }
+
+.partners_images
+{
+  margin:10px auto;
+  text-align: center;
+}
