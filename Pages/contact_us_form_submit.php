@@ -11,13 +11,15 @@ if($connection) {
         mysqli_query($connection, 'use FrontEnd');
         mysqli_query($connection, $sql);
 
-        $subject = 'no-reply';
-        $msg = 'Thanks for your valuable feedback.';
-        $headers = 'From: noreply@company.com';
+        $subject_to_user = "Your Query has been recieved";
+        $msg_to_user = "We have recieved your query and it is being reviewed by us. We encouraged you to contact us for futher queries. We will get back to you soon";
+        $headers = 'From: admin <admin@xyz.com>';
+        mail( $email,$subject_to_user,$msg_to_user,$headers);
 
-//        $ret= mail('himanshu.skb.oo7@gmail.com','no-reply','Thanks');
-//        echo ""+$ret;
-//        header( "Location: http://".$_SERVER['SERVER_NAME']."/Day3/index.html" );
+        $subject_to_admin = 'A User has submitted a query.';
+        $msg_to_admin = "User $firstname $lastname has given a feedback from $email email address. The include message is: $message";
+        mail('himanshu.skb.oo7@gmail.com',$subject_to_admin,$msg_to_admin,$headers);
+        header( "Location: http://".$_SERVER['SERVER_NAME']."/Day3/index.php" );
     } else {
         echo 'Some Values are Undefined';
     }
