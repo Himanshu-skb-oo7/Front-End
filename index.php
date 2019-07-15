@@ -7,17 +7,13 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
-
   <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/index.css">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -33,7 +29,7 @@
       <div id="header-buttons-div">
         <button class="header-buttons">HOW IT WORKS</button>
         <button class="header-buttons">BOOK TRAVEL</button>
-        <button class="header-buttons">CONTACT US</button>
+        <button class="header-buttons" data-toggle="modal" data-target="#contactUsForm">CONTACT US</button>
       </div>
     </div>
   </div>
@@ -43,7 +39,7 @@
   <div id="title" >
     <div id="headingAndBtn">
       <div id="heading">HOW IT WORKS</div>
-      <button class="btn" id="contactUs">CONTACT US</button>
+      <button class="btn" id="contactUs" data-toggle="modal" data-target="#contactUsForm">CONTACT US</button>
       </div>
     </div>
 
@@ -104,20 +100,24 @@
     <div id="partners-text" class="font-regular">
       Travel Partners with...
     </div>
-    <hr color="#F7F7F7" id="partners-hr">
-    <div id="partners-image">
-      <div class="row" id="image-row1">
-        <div class="col-4"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/American_Airlines.png"></div>
-        <div class="col-4"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/U.S.%20Airways.png"></div>
-        <div class="col-4"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/united.png"></div>
-      </div>
-      <div class="row" id="image-row2">
-        <div class="col-3"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/delta.png"></div>
-        <div class="col-3"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/hawaiin.png"></div>
-        <div class="col-3"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/jetBlue.png"></div>
-        <div class="col-3"><img src="img/FE_%20Assignment%202%20-%20GFT/image%20resources/southwest.png"></div>
-      </div>
 
+    <hr color="#F7F7F7" id="partners-hr">
+      <div id="partners-image">
+          <div class="row" id="image-row1">
+              <?php
+              $dir    = './img/FE_ Assignment 2 - GFT/image resources/Partners';
+              $files1 = scandir($dir);
+              $files2 = scandir($dir, 1);
+              foreach( $files1 as $row)
+              {
+                  if($row!='.' && $row!='..'  ) {
+                      $img_location = "img/FE_ Assignment 2 - GFT/image resources/Partners/$row";
+                      echo "<div class='col-4'><img src='$img_location'></div>";
+                  }
+              }
+              ?>
+          </div>
+      </div>
     </div>
   </div>
 </div>
@@ -126,7 +126,7 @@
   <div id="footer-1-links-parent">
     <div class="footer-1-links font-regular">How It Works</div>
     <div class="footer-1-links font-regular">Book Travel</div>
-    <div class="footer-1-links font-regular">Contact Us</div>
+    <div class="footer-1-links font-regular" data-toggle="modal" data-target="#contactUsForm">Contact Us</div>
   </div>
   <hr color="white" id="footer-hr">
   <div id="logo">
@@ -141,6 +141,38 @@
     <div class="footer-content font-regular" id="footer-content-child2">Copyright @ 2015 JTG, Inc. All rights reserveds</div>
   </div>
 </div>
+</div>
+
+
+<div id="contactUsForm" class="modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Contact Us Form</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+      <form action="Pages/contact_us_form_submit.php" method="post">
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" placeholder="Enter your Email...">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write Your Message Here..." style="height:70px"></textarea>
+      <input type="submit" value="Submit">
+      <button id="close" type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </form>
+      </div>
+
+    </div>
+  </div>
 </div>
 </body>
 
